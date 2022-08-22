@@ -5,6 +5,13 @@ require('dotenv').config();
 
 const app = express();
 
+// body parser.. para parsear lo que viene en los post
+// para poder leer el formato x-www-form-urlencoded en Body de la peticion Post
+app.use( bodyParser.urlencoded({ extended: true }))
+
+// Ruta nueva
+app.use('/', require('./routes/auth'));
+
 app.listen(process.env.PORT || 3000, ()=>{
     const port = process.env.PORT || 3000;
     console.log('Servidor corriendo en el Puerto ', port );
