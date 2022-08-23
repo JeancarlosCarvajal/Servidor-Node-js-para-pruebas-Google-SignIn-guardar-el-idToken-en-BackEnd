@@ -1,5 +1,9 @@
 
+# saca los modulos Node
+node_modules/
+
 # Tokens
-.env
+# .env
+
 
 
